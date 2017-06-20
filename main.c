@@ -6,26 +6,41 @@
  *      Author: paul
  */
 
-#include<avr/io.h>
+// POV toy demo framework //
+
+// ------- Preamble -------- //
+#include <avr/io.h>
 #include <util/delay.h>
 
-#define BLINK_DELAY_MS 50
-
-int main (void)
-{
- /* set pin 5 of PORTB for output*/
- DDRB |= _BV(DDB5);
-
- while(1) {
-  /* set pin 5 high to turn led on */
-  PORTB |= _BV(PORTB5);
-  _delay_ms(BLINK_DELAY_MS);
-
-  /* set pin 5 low to turn led off */
-  PORTB &= ~_BV(PORTB5);
-  _delay_ms(BLINK_DELAY_MS);
- }
-}
+// -------- Functions --------- //
 
 
+int main(void) {
 
+  // -------- Inits --------- //
+	DDRB = (1>>PB1);
+	DDRB = (1>>PB2);
+	DDRB = (1>>PB3);
+             /* Data Direction Register B:
+                                   writing a one to the bit
+                                   enables output. */
+
+  // ------ Event loop ------ //
+  while (1) {
+
+	PORTB |= (1<<PB1);          /* Turn on 2nd LED bit/pin in PORTB */
+    _delay_ms(10);                                           /* wait */
+
+    PORTB |= (1<<PB2);
+    _delay_ms(10);                                           /* wait */
+
+    PORTB = 0b00000000;
+    _delay_ms(10);
+
+    PORTB |= (1<<PB3);
+    _delay_ms(10);
+
+
+      }                                                  /* End event loop */
+      return (0);                            /* This line is never reached */
+    }
