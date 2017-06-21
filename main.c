@@ -18,9 +18,9 @@
 int main(void) {
 
   // -------- Inits --------- //
-	DDRB = (1>>PB1);
-	DDRB = (1>>PB2);
-	DDRB = (1>>PB3);
+	DDRB = (1<<PB1);
+	DDRB = (1<<PB2);
+	DDRB = (1<<PB3);
              /* Data Direction Register B:
                                    writing a one to the bit
                                    enables output. */
@@ -28,16 +28,21 @@ int main(void) {
   // ------ Event loop ------ //
   while (1) {
 
-	PORTB |= (1<<PB1);          /* Turn on 2nd LED bit/pin in PORTB */
-    _delay_ms(10);                                           /* wait */
 
-    PORTB |= (1<<PB2);
-    _delay_ms(10);                                           /* wait */
 
-    PORTB = 0b00000000;
+	PORTB ^= (1<<PB1);          /* Turn on 2nd LED bit/pin in PORTB */
+    _delay_ms(10);                                          /* wait */
+
+    PORTB ^= (1<<PB2);
+    _delay_ms(10);                                          /* wait */
+
+    PORTB &= ~((1<<PB1)|(1<<PB2));
     _delay_ms(10);
 
-    PORTB |= (1<<PB3);
+    PORTB |= ((1<<PB1)|(1<<PB3));
+    _delay_ms(10);
+
+    PORTB &= ~(1<<PB3);
     _delay_ms(10);
 
 
