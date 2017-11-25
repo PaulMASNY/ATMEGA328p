@@ -1,51 +1,32 @@
-/*
- * main.c
-
- *
- *  Created on: 10 Jun 2017
- *      Author: paul
- */
-
-// POV toy demo framework //
+/* Blinker Demo */
 
 // ------- Preamble -------- //
-#include <avr/io.h>
-#include <util/delay.h>
+#include <avr/io.h>                        /* Defines pins, ports, etc */
+#include <util/delay.h>                     /* Functions to waste time */
+#include <avr/interrupt.h>
+#include <avr/power.h>
+#include "USART.h"
 
-// -------- Functions --------- //
-
-
+// -------- Inits --------- //
 int main(void) {
 
-  // -------- Inits --------- //
-	DDRB = (1<<PB1);
-	DDRB = (1<<PB2);
-	DDRB = (1<<PB3);
-             /* Data Direction Register B:
-                                   writing a one to the bit
-                                   enables output. */
+	DDRB |= (1 << PB0); /* Data Direction Register B:
+	 writing a one to the bit
+	 enables output. */
 
-  // ------ Event loop ------ //
-  while (1) {
+	// ------ Event loop ------ //
+	while (1) {
 
+		PORTB = 0b00000001; /* Turn on first LED bit/pin in PORTB */
 
+		_delay_ms(0.025); /* wait */
 
-	PORTB ^= (1<<PB1);          /* Turn on 2nd LED bit/pin in PORTB */
-    _delay_ms(10);                                          /* wait */
+		PORTB = 0b00000000; /* Turn off all port B pins, including LED */
 
-    PORTB ^= (1<<PB2);
-    _delay_ms(10);                                          /* wait */
+		_delay_ms(0.075); /* wait */
 
-    PORTB &= ~((1<<PB1)|(1<<PB2));
-    _delay_ms(10);
+	} /* End event loop */
 
-    PORTB |= ((1<<PB1)|(1<<PB3));
-    _delay_ms(10);
+	return (0); /* This line is never reached */
 
-    PORTB &= ~(1<<PB3);
-    _delay_ms(10);
-
-
-      }                                                  /* End event loop */
-      return (0);                            /* This line is never reached */
-    }
+}
