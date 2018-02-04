@@ -1,31 +1,40 @@
-/* Blinker Demo */
+/* The frequency should be set on */
+#define F_CPU 7372800UL
+
+
 
 // ------- Preamble -------- //
+
 #include <avr/io.h>                        /* Defines pins, ports, etc */
-#include <util/delay.h>                     /* Functions to waste time */
-#include <avr/interrupt.h>
-#include <avr/power.h>
-#include "USART.h"
+#include <util/delay.h> /* Functions to waste time */
+#include"HD44780.h"
 
 // -------- Inits --------- //
+
+uint8_t home[] = {4, 10, 31, 17, 17, 17, 31, 0};
+uint8_t termo[] = {14, 10, 10, 14, 31, 31, 14, 0}; //thermometer
+
 int main(void) {
 
-	DDRB |= (1 << PB0); /* Data Direction Register B:
-	 writing a one to the bit
-	 enables output. */
 
-	// ------ Event loop ------ //
-	while (1) {
+	LCD_Initialize();
 
-		PORTB = 0b00000001; /* Turn on first LED bit/pin in PORTB */
+	LCD_ProgrammChar(0, home); //
+	LCD_ProgrammChar(1, termo);
 
-		_delay_ms(0.025); /* wait */
+	LCD_Clear();
 
-		PORTB = 0b00000000; /* Turn off all port B pins, including LED */
+	LCD_WriteData(1); //wyswietlenie wlasnego znaku numer 1.
+	LCD_WriteText(" LINE 1");
+	LCD_GoTo(0,1); //line 2
+	LCD_WriteData(0); //wyswietlenie wlasnego znaku numer 0.
+	LCD_WriteText(" LINE 2");
 
-		_delay_ms(0.075); /* wait */
-
-	} /* End event loop */
+// ------ Event loop ------ //
+//
+//	while (1) {
+//
+//	} /* End event loop */
 
 	return (0); /* This line is never reached */
 
