@@ -1,0 +1,19 @@
+Partlist exported from /home/paul/eagle/Development_board/DVP_board.sch at 19/01/2018 14:29
+
+Part  Value           Device                            Package             Description                                                                   
+C1    22pF            CAPPTH1                           CAP-PTH-5MM         Capacitor                                                                     
+C2    22pF            CAPPTH1                           CAP-PTH-5MM         Capacitor                                                                     
+C3    0.1uF           CPOL-EUE2-4                       E2-4                POLARIZED CAPACITOR, European symbol                                          
+IC1   ATMEGA 328p     ATMEGA48/88/168/328-PU(DIP28)28-3 DIL28-3             ATMEGA 328 DIP                                                                
+J1    AVR_SPI_PRG_6NS AVR_SPI_PRG_6NS                   2X3-NS              AVR ISP 6 Pin                                                                 
+JP1                   M025MM                            SCREWTERMINAL-5MM-2 Header 2                                                                      
+JP2   M14             M14                               1X14                Header 14                                                                     
+JP3                   M02PTH                            1X02                Header 2                                                                      
+JP4   M14             M14                               1X14                Header 14                                                                     
+K1    61301611121     61301611121                       61301611121         WR-PHD 2.54mm Pin Header, 16 Pins =>Code : Con_BTB_PHD_2.54_1_THT_61301611121 
+K2    61300311121     61300311121                       61300311121         WR-PHD 5.54mm Pin Header, 3 Pin =>Code : Con_BTB_PHD_2.54_1_THT_61300311121   
+LD1                   DUOLED-RG-C                       DUOLED-C-5MM        DUO LED                                                                       
+R1    330R            R-EU_0207/10                      0207/10             RESISTOR, European symbol                                                     
+R2    330R            R-EU_0207/10                      0207/10             RESISTOR, European symbol                                                     
+R3    2.5k            R-EU_0207/10                      0207/10             RESISTOR, European symbol                                                     
+S1    9450-27X7       9450-27X7                         DPDT_7X7            DPDT SWITCH                                                              
