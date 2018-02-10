@@ -21,8 +21,8 @@
 ##### INTRO
 
 This project ends up with a small 8-bit micro-controller 
-board, serving for testing purpose with various crystals and 
-configurations usable with both 3.3V and 5V power sources. 
+board, serving for testing purposes with various crystals and 
+configurations. Both 3.3V and 5V power sources can be used. 
 
 
 ##### SOLUTION WITH 2x16 LCD IN 4-bit MODE
@@ -44,8 +44,7 @@ The following list, generated from eagle does not contain the 2x16 LCD and
 I have also privileged one-side board variant with some airwires on the high side. In fact, 
 this ones can be easily done by homemade etching. As a remark to the realization below, 
 the JP3 pin is only used for LCD backlight. Both 2x16 and 4x20 LCD's fit to the 
-onboard socket.
-Furthermore,  
+onboard socket. There is also a jumper for LCD backlight.
 
     - electrical schematics
 
@@ -53,15 +52,21 @@ Furthermore,
 
          - PCB layout with components and wiring
 
+Everything is done on a 70 x 100 mm one-sided PCB.
+
 ![Figure 1-3](images/Board.png?raw=true "Figure 1-3")
 
-         - PCB layout for homemade etching
+         - PCB layout for homemade etching 
 
 ![Figure 1-4](images/BoardEtch.png?raw=true "Figure 1-4")
+
+The image can be copied as is and printed to transfer paper for ironing. This is the copper
+side of a simple one sided PCB.
 
 
          - 3D export
 
+A final assembly of the protoboard is here :
 
 ![Figure 1-5](images/3D_Model.png?raw=true "Figure 1-5")
 
