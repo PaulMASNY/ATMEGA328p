@@ -74,4 +74,4 @@ A true 3D view is accessible when clicking on this link :<a href="http://autode.
 
 ##### CONCLUSION
 
-
+A very simple board is done, using Chinese components, for less than USD 10.
