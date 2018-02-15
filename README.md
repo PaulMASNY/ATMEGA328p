@@ -42,8 +42,8 @@ The following list, generated from eagle does not contain the 2x16 LCD and
 ##### DESIGN
 
 I have also privileged one-side board variant with some airwires on the high side. In fact, 
-this ones can be easily done by homemade etching. As a remark to the realization below, 
-the JP3 pin is only used for LCD backlight. Both 2x16 and 4x20 LCD's fit to the 
+these ones can be easily done by homemade etching. As a remark to the assembly below, 
+the JP3 pin is used for LCD backlight only. Both 2x16 and 4x20 LCD's fit to the 
 onboard socket. There is also a jumper for LCD backlight.
 
     - electrical schematics
@@ -52,7 +52,7 @@ onboard socket. There is also a jumper for LCD backlight.
 
          - PCB layout with components and wiring
 
-Everything is done on a 70 x 100 mm one-sided PCB.
+Everything enters on a 70 x 100 mm one-sided PCB.
 
 ![Figure 1-3](images/Board.png?raw=true "Figure 1-3")
 
@@ -61,7 +61,7 @@ Everything is done on a 70 x 100 mm one-sided PCB.
 ![Figure 1-4](images/BoardEtch.png?raw=true "Figure 1-4")
 
 The image can be copied as is and printed to transfer paper for ironing. This is the copper
-side of a simple one sided PCB.
+side of a simple one-sided PCB.
 
 
          - 3D export
@@ -74,4 +74,4 @@ A true 3D view is accessible when clicking on this link :<a href="http://autode.
 
 ##### CONCLUSION
 
-A very simple board is done, using Chinese components, for less than USD 10.
+This very simple board can be made, using Chinese components, for less than 100 Rands.
