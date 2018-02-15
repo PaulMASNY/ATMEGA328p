@@ -46,7 +46,7 @@ I recommend a homebrew version made from the Peter's Fleury's stub. It can be fo
 I have also privileged one-side board variant with some airwires on the high side. In fact, 
 these ones can be easily done by homemade etching. As a remark to the assembly below, 
 the JP3 pin is used for LCD backlight only. Both 2x16 and 4x20 LCD's fit to the 
-onboard socket. There is also a jumper for LCD backlight.
+onboard socket. 
 
     - electrical schematics
 
