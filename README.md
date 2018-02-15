@@ -37,7 +37,9 @@ The following list, generated from eagle does not contain the 2x16 LCD and
 
 ![Figure 1-1](images/BOM.png?raw=true "Figure 1-1")
 
+    - AVR C libraries
 
+I recommend a homebrew version made from the Peter's Fleury's stub. It can be found in the folder above.
 
 ##### DESIGN
 
