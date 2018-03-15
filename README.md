@@ -72,7 +72,7 @@ A final assembly of the protoboard is here :
 
 ![Figure 1-5](images/3D_Model.png?raw=true "Figure 1-5")
 
-A true 3D view is accessible when clicking on this link :<a href="http://autode.sk/2EYVTxh" target="_blank"> Autodesk_3D_view </a>
+A true 3D view is accessible when clicking on this link :<a href="http://autode.sk/2F6BPxc" target="_blank"> Autodesk_3D_view </a>
 
 ##### CONCLUSION
 
