@@ -1,4 +1,3 @@
-#ATMEGA328p
 Simple and cheap 8-bit development board.
 
 ### ATMEGA 328p TESTING BOARD
